@@ -23,10 +23,10 @@ public class MainApp {
 //        userService.add(new User("User3", "Lastname3", "user3@mail.ru"));
 //        userService.add(new User("User4", "Lastname4", "user4@mail.ru"));
 //
-//        User user6 = new User("User7", "Lastname7",
-//                "user7@mail.ru");
-//        user6.setCar(new Car("Lada", 5));
-//        userService.add(user6);
+        User user6 = new User("User7", "Lastname7",
+                "user7@mail.ru");
+        user6.setCar(new Car("Lada", 7));
+        userService.add(user6);
 
         List<User> users = userService.listUsers();
         for (User user : users) {

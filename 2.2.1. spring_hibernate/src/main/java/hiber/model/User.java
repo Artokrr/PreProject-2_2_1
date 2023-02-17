@@ -1,5 +1,6 @@
 package hiber.model;
 
+import org.hibernate.engine.spi.CascadeStyle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -23,8 +24,9 @@ public class User {
    @Column(name = "email")
    private String email;
 
-   @OneToOne(cascade = CascadeType.ALL)
-   @JoinColumn(name = "car_id")
+   @OneToOne
+   @JoinColumn(name = "id")
+   @MapsId
    private  Car car;
 
    public User() {}
